@@ -27,6 +27,6 @@ public class Match implements Comparable<Match> {
     
     @Override
     public int compareTo(Match otherMatch) {
-        return this.matchDate.compareTo(otherMatch.getMatchDate());
+    	return (otherMatch.getMatchDate()).compareTo(matchDate);
     }
 }

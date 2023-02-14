@@ -2,9 +2,8 @@ package Match;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Scanner;
+import java.util.TreeSet;
 
 public class Main {
 		public static void main(String[] args) {
@@ -14,7 +13,7 @@ public class Main {
 			int m = sc.nextInt();
 			sc.nextLine();
 			
-			ArrayList<Match> matches = new ArrayList<Match>();
+			TreeSet<Match> matches = new TreeSet<Match>();
 			
 			for(int i=0; i < m; i++) {
 				System.out.println("Enter details for match-"+(i+1));
@@ -29,7 +28,8 @@ public class Main {
 				
 				matches.add(new Match(matchDate, team1, team2));
 			}
-			 Collections.sort(matches, Collections.reverseOrder());
+//			 Collections.sort(matches, Collections.reverseOrder());
+			matches.descendingSet();
 			 System.out.println("Match Detail");
 		
 			 	for(Match match: matches) {
