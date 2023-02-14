@@ -29,7 +29,7 @@ public class Main {
 				
 				matches.add(new Match(matchDate, team1, team2));
 			}
-			 Collections.reverse(matches);
+			 Collections.sort(matches, Collections.reverseOrder());
 			 System.out.println("Match Detail");
 		
 			 	for(Match match: matches) {
